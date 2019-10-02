@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="ANSI Debug|Win32">
+      <Configuration>ANSI Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="ANSI Release|Win32">
+      <Configuration>ANSI Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Unicode Debug|Win32">
+      <Configuration>Unicode Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Unicode Release|Win32">
+      <Configuration>Unicode Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectName>GmodLua</ProjectName>
+    <ProjectGuid>{4570DA81-D482-4BDB-B4AC-3866D0D49B04}</ProjectGuid>
+    <RootNamespace>vcbuild</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ANSI Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ANSI Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Unicode Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Unicode Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='ANSI Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='ANSI Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Unicode Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Unicode Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>15.0.28307.799</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Unicode Debug|Win32'">
+    <OutDir>.\..\bin\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Unicode Release|Win32'">
+    <OutDir>.\..\bin\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ANSI Release|Win32'">
+    <OutDir>$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ANSI Debug|Win32'">
+    <OutDir>$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Unicode Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>.\..\..\GmodLua\src;.\..\..\GmodLua\legacylib;.\..\..\PowerEditor\src\MISC\PluginsManager;.\..\..\PowerEditor\src\MISC\Common;.\..\..\PowerEditor\src\WinControls;.\..\..\PowerEditor\src\WinControls\StaticDialog;.\..\..\scintilla\include;.\..\..\scintilla\lexlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;VCBUILD_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeader />
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>.\..\..\scintilla\vcbuild\Debug\WordList;.\..\..\scintilla\vcbuild\Debug\Accessor;.\..\..\scintilla\vcbuild\Debug\LexerBase;.\..\..\scintilla\vcbuild\Debug\PropSetSimple;.\..\..\scintilla\vcbuild\Debug\StyleContext;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>.\..\bin\GmodLua.dll</OutputFile>
+      <AdditionalLibraryDirectories>C:\Users\Kyle\Documents\Visual Studio 2008\Projects\scintilla\vcbuild\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ModuleDefinitionFile>../src/GmodLua_Plugin.def</ModuleDefinitionFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)$(TargetName).pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <ImportLibrary>.\..\bin\GmodLua.lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Unicode Release|Win32'">
+    <ClCompile>
+      <Optimization>Full</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>.\..\..\GmodLua\src;.\..\..\GmodLua\legacylib;.\..\..\PowerEditor\src\MISC\PluginsManager;.\..\..\PowerEditor\src\MISC\Common;.\..\..\PowerEditor\src\WinControls;.\..\..\PowerEditor\src\WinControls\StaticDialog;.\..\..\scintilla\include;.\..\..\scintilla\lexlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;VCBUILD_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader />
+      <WarningLevel>Level2</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>.\..\..\scintilla\vcbuild\Release\WordList;.\..\..\scintilla\vcbuild\Release\Accessor;.\..\..\scintilla\vcbuild\Release\LexerBase;.\..\..\scintilla\vcbuild\Release\PropSetSimple;.\..\..\scintilla\vcbuild\Release\StyleContext;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>.\..\bin\GmodLua.dll</OutputFile>
+      <ModuleDefinitionFile>../src/GmodLua_Plugin.def</ModuleDefinitionFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)$(TargetName).pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <ImportLibrary>.\..\bin\GmodLua.lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ANSI Release|Win32'">
+    <ClCompile>
+      <Optimization>Full</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>.\..\..\GmodLua\src;.\..\..\GmodLua\legacylib;.\..\..\PowerEditor\src\MISC\PluginsManager;.\..\..\PowerEditor\src\MISC\Common;.\..\..\PowerEditor\src\WinControls;.\..\..\PowerEditor\src\WinControls\StaticDialog;.\..\..\scintilla\include;.\..\..\scintilla\lexlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;VCBUILD_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader />
+      <WarningLevel>Level2</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>.\..\..\scintilla\vcbuild\Release\WordList;.\..\..\scintilla\vcbuild\Release\Accessor;.\..\..\scintilla\vcbuild\Release\LexerBase;.\..\..\scintilla\vcbuild\Release\PropSetSimple;.\..\..\scintilla\vcbuild\Release\StyleContext;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>.\..\bin\GmodLua.dll</OutputFile>
+      <ModuleDefinitionFile>../src/GmodLua_Plugin.def</ModuleDefinitionFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)$(TargetName).pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <ImportLibrary>.\..\bin\GmodLua.lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ANSI Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>.\..\..\GmodLua\src;.\..\..\GmodLua\legacylib;.\..\..\PowerEditor\src\MISC\PluginsManager;.\..\..\PowerEditor\src\MISC\Common;.\..\..\PowerEditor\src\WinControls;.\..\..\PowerEditor\src\WinControls\StaticDialog;.\..\..\scintilla\include;.\..\..\scintilla\lexlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;VCBUILD_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeader />
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>.\..\..\scintilla\vcbuild\Debug\WordList;.\..\..\scintilla\vcbuild\Debug\Accessor;.\..\..\scintilla\vcbuild\Debug\LexerBase;.\..\..\scintilla\vcbuild\Debug\PropSetSimple;.\..\..\scintilla\vcbuild\Debug\StyleContext;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>.\..\bin\GmodLua.dll</OutputFile>
+      <AdditionalLibraryDirectories>C:\Users\Kyle\Documents\Visual Studio 2008\Projects\scintilla\vcbuild\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ModuleDefinitionFile>../src/GmodLua_Plugin.def</ModuleDefinitionFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)$(TargetName).pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <ImportLibrary>.\..\bin\GmodLua.lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\legacylib\OldKeyWords.cxx" />
+    <ClCompile Include="..\legacylib\OldPlatWin.cxx" />
+    <ClCompile Include="..\legacylib\OldPropSet.cxx" />
+    <ClCompile Include="..\legacylib\OldStyleContext.cxx" />
+    <ClCompile Include="..\legacylib\OldUniConversion.cxx" />
+    <ClCompile Include="..\legacylib\OldWindowAccessor.cxx" />
+    <ClCompile Include="..\legacylib\OldXPM.cxx" />
+    <ClCompile Include="..\src\GmodLua.cpp" />
+    <ClCompile Include="..\src\Legacy.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\legacylib\OldAccessor.h" />
+    <ClInclude Include="..\legacylib\OldFontQuality.h" />
+    <ClInclude Include="..\legacylib\OldKeyWords.h" />
+    <ClInclude Include="..\legacylib\OldPlatform.h" />
+    <ClInclude Include="..\legacylib\OldPlatformRes.h" />
+    <ClInclude Include="..\legacylib\OldPropSet.h" />
+    <ClInclude Include="..\legacylib\OldPropSetSimple.h" />
+    <ClInclude Include="..\legacylib\OldSciLexer.h" />
+    <ClInclude Include="..\legacylib\OldScintilla.h" />
+    <ClInclude Include="..\legacylib\OldStyleContext.h" />
+    <ClInclude Include="..\legacylib\OldUniConversion.h" />
+    <ClInclude Include="..\legacylib\OldWindowAccessor.h" />
+    <ClInclude Include="..\legacylib\OldXPM.h" />
+    <ClInclude Include="..\src\GmodLua.h" />
+    <ClInclude Include="..\src\Legacy.h" />
+    <ClInclude Include="..\src\resource.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\src\GmodLua_Plugin.def" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\src\GmodLua.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

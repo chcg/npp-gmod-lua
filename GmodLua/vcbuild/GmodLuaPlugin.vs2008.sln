@@ -1,11 +1,9 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 10.00
-# Visual Studio 2008
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GmodLua", "vcbuild.vcproj", "{4570DA81-D482-4BDB-B4AC-3866D0D49B04}"
-	ProjectSection(ProjectDependencies) = postProject
-		{8F7E5B21-F6B7-41D6-86E9-B48CC02215F7} = {8F7E5B21-F6B7-41D6-86E9-B48CC02215F7}
-		{FCF60E65-1B78-4D1D-AB59-4FC00AC8C248} = {FCF60E65-1B78-4D1D-AB59-4FC00AC8C248}
-	EndProjectSection
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.852
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GmodLua", "vcbuild.vcxproj", "{4570DA81-D482-4BDB-B4AC-3866D0D49B04}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "notepadPlus", "..\..\PowerEditor\visual.net\notepadPlus.vcproj", "{FCF60E65-1B78-4D1D-AB59-4FC00AC8C248}"
 	ProjectSection(ProjectDependencies) = postProject
@@ -49,5 +47,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E8A39BEA-A2CA-4772-B993-2380B12CDE7F}
 	EndGlobalSection
 EndGlobal
